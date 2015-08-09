@@ -1,5 +1,7 @@
 package tr.org.lkd.lyk2015.sampleservlet;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -51,5 +53,15 @@ public class Todo {
 		this.done = done;
 	}
 	
+	public String getDate()
+	{
+		Date date = this.datetime.getTime();             
+		SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");  
+		String datetime= null;
+		datetime = format1.format(date);
+		System.out.println(datetime);
+		
+		return datetime;
+	}
 	
 }
