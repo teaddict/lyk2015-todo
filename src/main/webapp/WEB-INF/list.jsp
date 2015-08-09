@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-9" pageEncoding='ISO-8859-9' %>
 <%@ page import="java.util.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
