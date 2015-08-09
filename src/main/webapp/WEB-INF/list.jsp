@@ -39,7 +39,10 @@
 		<td><input class="checkbox" type="checkbox" value="${todo.id}" name="id" <c:if test="${todo.done}">checked</c:if> ></td>
 		<input type="submit" value="Save">
 	</form>
-  
+  	<form action="edit" method="get">
+  		<input type="hidden" value="${todo.id}" name="id" />
+		<input type="submit" value="Edit">
+	</form>
   </tr>
   <br>
 </c:forEach>
