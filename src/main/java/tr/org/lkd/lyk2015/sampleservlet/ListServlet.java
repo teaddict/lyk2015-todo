@@ -18,6 +18,7 @@ public class ListServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//super.doGet(req, resp);
+		//tüm nesneleri çek
 		req.setAttribute("todos", Storage.getInstance().getAllTodos());
 		req.getRequestDispatcher("WEB-INF/list.jsp").forward(req,resp);
 	}
@@ -27,14 +28,19 @@ public class ListServlet extends HttpServlet{
 		String i = req.getParameter("id"); 
 		Long id = Long.valueOf(i).longValue();
 		
+		//nesneyi id ile çağır ve "done" variable kontrol et
+		//eğer true ise false
+		//false ise true olarak değiştir
 		Todo todo = Storage.getInstance().getById(id);
 		if(todo.getDone())
 			done = "false";
 		else
 			done = "true";
-			
+		
+		//nesneyi güncelle
 		Storage.getInstance().mark(id, done);
 		
+		//yönlendirme
 		req.setAttribute("todos", Storage.getInstance().getAllTodos());
 		req.getRequestDispatcher("WEB-INF/list.jsp").forward(req,resp);
 	}

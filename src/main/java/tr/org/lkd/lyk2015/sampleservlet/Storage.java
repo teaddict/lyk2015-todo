@@ -5,8 +5,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Storage {
+	//erişilmesin dışardan 
 	private static Storage storage = null;
+	//nesnelerimizi sakladığımız map
 	private Map<Long,Todo> myTodo = new HashMap<Long,Todo>();
+	//multi thread işlem korunması
 	private static Object lock = new Object();
 	
 	private Storage() {
@@ -59,6 +62,7 @@ public class Storage {
 		
 	}
 	
+	//id ile nesneyi çek
 	public Todo getById(Long id)
 	{
 		return myTodo.get(id);

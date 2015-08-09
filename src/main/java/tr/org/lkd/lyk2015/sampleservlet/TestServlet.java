@@ -17,10 +17,10 @@ public class TestServlet extends HttpServlet{
 			// TODO Auto-generated method stub
 			//super.doGet(req, resp);
 			
-			Todo t1 = new Todo("test1","test1",Calendar.getInstance(),false);
-			Todo t2 = new Todo("test2","test2",Calendar.getInstance(),false);
-			Todo t3 = new Todo("test3","test3",Calendar.getInstance(),true);
-			Todo t4 = new Todo("test4","test4",Calendar.getInstance(),false);
+			Todo t1 = new Todo("teknoloji","usb kablo alincak",Calendar.getInstance(),false);
+			Todo t2 = new Todo("market","su alincak",Calendar.getInstance(),false);
+			Todo t3 = new Todo("fatura","elektrik odencek",Calendar.getInstance(),true);
+			Todo t4 = new Todo("beyaz esya","taksit odencek",Calendar.getInstance(),false);
 			
 			
 			Storage.getInstance().add(t1);

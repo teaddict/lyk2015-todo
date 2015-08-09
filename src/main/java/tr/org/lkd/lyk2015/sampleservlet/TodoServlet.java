@@ -45,8 +45,9 @@ public class TodoServlet extends HttpServlet{
 	            System.out.println("Exception "+ex);
 	     }
 	     Boolean done = false;
-	     
+	     //nesne oluştur
 	     Todo todo = new Todo(name,desc,datetime,done);
+	     //storage e ekle nesnemizi
 	     Storage.getInstance().add(todo);
 	     
 	     resp.sendRedirect("list");
