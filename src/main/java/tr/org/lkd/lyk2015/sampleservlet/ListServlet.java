@@ -25,7 +25,7 @@ public class ListServlet extends HttpServlet{
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException ,IOException {
 		String done = "false";
-		String i = req.getParameter("id"); 
+		String i= req.getParameter("id");
 		Long id = Long.valueOf(i).longValue();
 		
 		//nesneyi id ile çağır ve "done" variable kontrol et
