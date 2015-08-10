@@ -37,7 +37,7 @@
 	<br>
   	<form action="list" method="post">
   		<td><input type="hidden" name="id" value="${todo.id}"/></td>
-		<td><input class="checkbox" type="checkbox" <c:if test="${todo.done}">checked</c:if> ></td>
+		<td><input class="checkbox" type="checkbox" name="check" <c:if test="${todo.done}">checked</c:if> ></td>
 		<input type="submit" value="Save">
 	</form>
   	<form action="edit" method="get">
