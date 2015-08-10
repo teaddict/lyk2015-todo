@@ -27,16 +27,21 @@ public class ListServlet extends HttpServlet{
 		String done = "false";
 		String i= req.getParameter("id");
 		Long id = Long.valueOf(i).longValue();
-		
+		String d = req.getParameter("check");
 		//nesneyi id ile çağır ve "done" variable kontrol et
 		//eğer true ise false
 		//false ise true olarak değiştir
-		Todo todo = Storage.getInstance().getById(id);
-		if(todo.getDone())
-			done = "false";
-		else
-			done = "true";
 		
+		Todo todo = Storage.getInstance().getById(id);
+		if(d != null && !d.isEmpty())
+		{
+			done = "true";
+			
+		}
+		else
+		{
+			done = "false";
+		}
 		//nesneyi güncelle
 		Storage.getInstance().mark(id, done);
 		
